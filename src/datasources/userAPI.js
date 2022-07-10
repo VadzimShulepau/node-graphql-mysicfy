@@ -1,15 +1,15 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
 
-class MusicfyAPI extends RESTDataSource {
+class UserAPI extends RESTDataSource {
 
   constructor() {
     super();
     this.baseURL = process.env.USER;
   }
 
-  // willSendRequest(req) {
-  //   req.headers.set('Authorization', this.context.token);
-  // }
+  willSendRequest(req) {
+    req.headers.set('Authorization', this.context.token);
+  }
 
   async register(register) {
     return this.post(`${USER}/register`, register);
@@ -26,4 +26,4 @@ class MusicfyAPI extends RESTDataSource {
 
 };
 
-export default MusicfyAPI;
+export default UserAPI;

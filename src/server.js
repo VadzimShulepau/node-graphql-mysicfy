@@ -1,7 +1,7 @@
 import { ApolloServer } from "apollo-server";
 import typeDefsUser from "./users/types.js";
 import UserResolvers from './users/resolvers.js';
-import MusicfyAPI from "./datasources/musicfyAPI.js";
+import UserAPI from "./datasources/userAPI.js";
 import 'dotenv/config';
 
 const { PORT } = process.env;
@@ -13,7 +13,7 @@ const server = new ApolloServer({
   cache: "bounded",
   dataSources: () => {
     return {
-      musicfyAPI: new MusicfyAPI(),
+      userAPI: new UserAPI(),
     };
   },
 });
