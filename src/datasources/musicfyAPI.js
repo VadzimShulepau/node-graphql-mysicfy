@@ -10,19 +10,19 @@ class MusicfyAPI extends RESTDataSource {
     req.headers.set('Authorization', this.context.token);
   }
 
-  register(body) {
+  async register(body) {
     console.log(body)
-    return this.post(`${this.usersURL}register`, body);
+    return await this.post(`${this.usersURL}register`, body);
   }
 
-  login(body) {
-    console.log(login)
-    return this.get(`${this.usersURL}login`, body);
+  async login(body) {
+    console.log(body)
+    return await this.get(`${this.usersURL}login`, body);
   }
 
-  getUser(id){
+  async getUser(id){
     console.log(id)
-    return this.get(`${this.usersURL}${id}`);
+    return await this.get(`${this.usersURL}${id}`);
   }
 
 

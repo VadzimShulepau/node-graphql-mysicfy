@@ -16,6 +16,6 @@ const server = new ApolloServer({
   },
 });
 
-server.listen().then(({ url }) => {
+server.listen({ port: PORT }).then(({ url }) => {
   console.log(`Server started at ${url}`);
 });
