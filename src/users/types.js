@@ -5,8 +5,8 @@ type User {
   id: ID!
   firstName: String
   lastName: String
-  password: String!
   email: String!
+  password: String!
 }
 
 input RegisterInput {
