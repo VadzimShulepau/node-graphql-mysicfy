@@ -1,0 +1,5 @@
+
+addTrackToFavourites
+addBandToFavourites
+addArtistToFavourites
+addGenreToFavourites

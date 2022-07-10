@@ -1,0 +1,4 @@
+
+createGenre
+deleteGenre
+updateGenre

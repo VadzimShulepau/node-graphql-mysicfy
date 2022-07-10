@@ -1,0 +1,4 @@
+
+createAlbum
+deleteAlbum
+updateAlbum

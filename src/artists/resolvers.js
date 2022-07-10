@@ -1,0 +1,4 @@
+
+createArtist
+deleteArtist
+updateArtist
