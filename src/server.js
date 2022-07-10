@@ -9,6 +9,8 @@ const { PORT } = process.env;
 const server = new ApolloServer({
   typeDefs: [typeDefsUser],
   resolvers: [UserResolvers],
+  csrfPrevention: true,
+  cache: "bounded",
   dataSources: () => {
     return {
       musicfyAPI: new MusicfyAPI(),

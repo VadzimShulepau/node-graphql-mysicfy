@@ -1,16 +1,18 @@
 
 const resolvers = {
   Query: {
-   async login(_, { login }, { dataSource }){
+    login: async (_, { login }, { dataSource }) => {
+      console.log(login)
       return await dataSource.musicfyAPI.login(login);
     },
-    async getUser(_, {id}){
+    getUser: async (_, { id }, { dataSource }) => {
+      console.log(id)
       return await dataSource.musicfyAPI.getUser(id);
     }
   },
 
   Mutation: {
-    async register(_, { register }, { dataSource }){
+    register: async (_, { register }, { dataSource }) => {
       return await dataSource.musicfyAPI.register(register);
     },
   }
