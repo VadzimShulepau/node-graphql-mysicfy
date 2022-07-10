@@ -1,19 +1,17 @@
 
 const resolvers = {
   Query: {
-    login: async (_, { login }, { dataSource }) => {
-      console.log(login)
-      return await dataSource.userAPI.login(login);
+    login: async (_, { login }, { dataSources }) => {
+      return await dataSources.userApi.login(login);
     },
-    getUser: async (_, { id }, { dataSource }) => {
-      console.log(id)
-      return await dataSource.userAPI.getUser(id);
+    getUser: async (_, { id }, { dataSources }) => {
+      return await dataSources.userAPI.getUser(id);
     }
   },
 
   Mutation: {
-    register: async (_, { register }, { dataSource }) => {
-      return await dataSource.userAPI.register(register);
+    register: async (_, { register }, { dataSources }) => {
+      return await dataSources.userAPI.register(register);
     },
   }
 };

@@ -4,7 +4,7 @@ class UserAPI extends RESTDataSource {
 
   constructor() {
     super();
-    this.baseURL = process.env.USER;
+    this.baseURL = process.env.USERS;
   }
 
   willSendRequest(req) {
@@ -12,15 +12,15 @@ class UserAPI extends RESTDataSource {
   }
 
   async register(register) {
-    return this.post(`${USER}/register`, register);
+    return this.post(`/register`, register);
   }
 
   async login(body) {
-    return this.get(`${USER}/login`, body);
+    return this.get(`/login`, body);
   }
 
   async getUser(id) {
-    return this.get(`${USER}/${id}`);
+    return this.get(`/${id}`);
   }
 
 
